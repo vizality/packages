@@ -30,14 +30,14 @@ export const Channels = Object.freeze({
   MISC_SUPPORT: '705264513728905266'
 });
 
-// @todo These need proper testing and more added.
+/*
+ * @todo These need proper testing and more added.
+ */
 export const Regexes = Object.freeze({
   DISCORD: '^(https?://)?(canary.|ptb.)?discord(?:app)?.com',
   get INVITE () { return `${this.DISCORD}/invite|.gg)/[a-zA-Z1-9]{2,}`; },
-  // eslint-disable-next-line no-useless-escape
   get MESSAGE_LINK () { return `${this.DISCORD}/channels/(?:@me|\d{17,19}/)?\d{17,19}/\d{17,19}`; },
   get ASSET_LINK () { return `(?:${this.DISCORD})?/assets/(?:[0-9].)?[a-zA-Z0-9]{20,32}.?[a-z]{2,5}`; },
-  // eslint-disable-next-line no-useless-escape
   EMOJI: '(:|<:|<a:)((\w{1,64}:\d{17,18})|(\w{1,64}))(:|>)',
   USER_ID: '^(\\d{17,19})$',
   USER_MENTION: '^<@!?(\\d+)>$',
@@ -45,7 +45,7 @@ export const Regexes = Object.freeze({
 });
 
 export const Events = Object.freeze({
-  /**
+  /*
    * Vizality Settings
    */
   VIZALITY_READY: 'VIZALITY_READY',
@@ -53,7 +53,7 @@ export const Events = Object.freeze({
   VIZALITY_SETTING_UPDATE: 'VIZALITY_SETTING_UPDATE',
   VIZALITY_SETTING_TOGGLE: 'VIZALITY_SETTING_TOGGLE',
 
-  /**
+  /*
    * Addons
    */
   VIZALITY_ADDON_SETTINGS_REGISTER: 'VIZALITY_ADDON_SETTINGS_REGISTER',
@@ -69,7 +69,7 @@ export const Events = Object.freeze({
   VIZALITY_ADDON_TOGGLE: 'VIZALITY_ADDON_TOGGLE',
   VIZALITY_ADDONS_READY: 'VIZALITY_ADDONS_READY',
 
-  /**
+  /*
    * Vizality APIs
    */
   VIZALITY_ACTION_ADD: 'VIZALITY_ACTION_ADD',
@@ -123,7 +123,6 @@ export const ActionTypes = Object.freeze({
   VIZALITY_DELETE_SETTING: 'VIZALITY_SETTING_DELETE'
 });
 
-
 export const IpcEvents = Object.freeze({
   VIZALITY_WINDOW_UNMAXIMIZE: 'VIZALITY_WINDOW_UNMAXIMIZE',
   VIZALITY_WINDOW_MAXIMIZE: 'VIZALITY_WINDOW_MAXIMIZE',
@@ -141,7 +140,7 @@ export const Developers = Object.freeze([
   '97549189629636608'
 ]);
 
-export const DefaultSettings = Object.freeze({
+export const Settings = Object.freeze({
   transparentWindow: false,
   experimentalWebPlatform: false,
   smoothScrolling: true,
@@ -149,3 +148,18 @@ export const DefaultSettings = Object.freeze({
   hotReload: false,
   replaceClyde: true
 });
+
+export default {
+  HTTP,
+  Repositories,
+  Guild,
+  Channels,
+  Regexes,
+  Events,
+  Avatars,
+  ActionTypes,
+  IpcEvents,
+  ErrorTypes,
+  Developers,
+  Settings
+};
