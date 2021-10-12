@@ -1,0 +1,17 @@
+{
+  "name": "@vizality/constants",
+  "description": "Contains a collection of constants used throughout the Vizality ecosystem.",
+  "author": {
+    "name": "Dustin Perolio",
+    "email": "dperolio@vizaliy.com",
+    "url": "https://dperolio.com"
+  },
+  "version": "1.0.5",
+  "license": "MIT",
+  "homepage": "https://vizality.com",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vizality/packages/tree/main/%40vizality/constants"
+  }
+}
