@@ -6,7 +6,7 @@
  * @namespace Util.Array
  */
 
-import { isArray as _isArray, isEmpty as _isEmpty, sample as _sample } from 'lodash';
+import { isArray as _isArray, isEmpty as _isEmpty, sample as _sample } from 'lodash-es';
 
 import { log, warn, error } from './logger';
 import { isString } from './string';
@@ -42,7 +42,7 @@ export const isArray = input => {
  */
 export const flattenArray = array => {
   return array.reduce((flat, toFlatten) => (
-    flat.concat(this.isArray(toFlatten) ? flattenArray(toFlatten) : toFlatten)
+    flat.concat(isArray(toFlatten) ? flattenArray(toFlatten) : toFlatten)
   ), []);
 };
 
@@ -57,7 +57,7 @@ export const assertArray = input => {
    * We do not want to use a try...catch here purposefully in order to
    * get proper stack traces and labels.
    */
-  if (!this.isArray(input)) {
+  if (!isArray(input)) {
     throw new TypeError(`Expected an array but received ${typeof input}.`);
   }
 };
@@ -71,7 +71,7 @@ export const assertArray = input => {
 export const toSentence = async (array, lastItemConnector = 'and', locale = 'en-US') => {
   try {
     // Assert argument types
-    this.assertArray(array);
+    assertArray(array);
     if (!isString(lastItemConnector) || (lastItemConnector.toLowerCase() !== 'and' && lastItemConnector.toLowerCase() !== 'or')) {
       throw new Error('Second argument must be a string value of "and" or "or".');
     }

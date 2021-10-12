@@ -6,7 +6,7 @@
  * @namespace Util.Number
  */
 
-import { isNumber as _isNumber } from 'lodash';
+import { isNumber as _isNumber } from 'lodash-es';
 
 import { log, warn, error } from './logger';
 import { assertArray } from './array';
@@ -41,7 +41,7 @@ export const assertNumber = input => {
    * We do not want to use a try...catch here purposefully in order to
    * get proper stack traces and labels.
    */
-  if (!this.isNumber(input)) {
+  if (!isNumber(input)) {
     throw new TypeError(`Expected a number but received ${typeof input}.`);
   }
 };

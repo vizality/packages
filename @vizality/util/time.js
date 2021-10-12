@@ -6,7 +6,7 @@
  * @namespace Util.Time
  */
 
-import { isDate as _isDate } from 'lodash';
+import { isDate as _isDate } from 'lodash-es';
 import moment from 'moment';
 
 import { log, warn, error } from './logger';
@@ -67,7 +67,7 @@ export const assertDate = input => {
    * We do not want to use a try...catch here purposefully in order to
    * get proper stack traces and labels.
    */
-  if (!this.isDate(input)) {
+  if (!isDate(input)) {
     throw new TypeError(`Expected a Date but received ${typeof input}.`);
   }
 };

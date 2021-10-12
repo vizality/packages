@@ -6,9 +6,9 @@
  * @namespace Util.String
  */
 
-import { camelCase, lowerCase, startCase, upperFirst, snakeCase, kebabCase, isString as _isString } from 'lodash';
+import { camelCase, lowerCase, startCase, upperFirst, snakeCase, kebabCase, isString as _isString } from 'lodash-es';
 import * as _chunk from 'chunk-text';
-import * as pluralize from 'pluralize';
+import pluralize from 'pluralize';
 
 import { log, warn, error } from './logger';
 
@@ -295,7 +295,7 @@ export const assertString = input => {
    * We do not want to use a try...catch here purposefully in order to
    * get proper stack traces and labels.
    */
-  if (!this.isString(input)) {
+  if (!isString(input)) {
     throw new TypeError(`Expected a string but received ${typeof input}.`);
   }
 };

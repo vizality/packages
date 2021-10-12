@@ -20,9 +20,9 @@ import { assertObject } from './object';
 
 /** @private */
 const _labels = [ 'Util', 'Logger' ];
-const _log = (labels, ...message) => this.log({ labels, message });
-const _warn = (labels, ...message) => this.warn({ labels, message });
-const _error = (labels, ...message) => this.error({ labels, message });
+const _log = (labels, ...message) => log({ labels, message });
+const _warn = (labels, ...message) => warn({ labels, message });
+const _error = (labels, ...message) => error({ labels, message });
 
 /**
  * Processes which type of console method to use.
@@ -166,7 +166,7 @@ const _logHandler = options => {
     /**
      * 
      */
-    for (const label of processedLabels.slice(0, this.MAX_LABELS_COUNT)) {
+    for (const label of processedLabels.slice(0, MAX_LABELS_COUNT)) {
       if (!label?.text || !label?.color) {
         throw new Error('Each label must contain a valid text and color property.');
       }

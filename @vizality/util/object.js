@@ -6,7 +6,7 @@
  * @namespace Util.Object
  */
 
-import { isObject as _isObject, isEmpty as _isEmpty } from 'lodash';
+import { isObject as _isObject, isEmpty as _isEmpty } from 'lodash-es';
 
 import { toPlural, assertString } from './string';
 import { log, warn, error } from './logger';
@@ -47,7 +47,7 @@ export const _traverse = function*(obj, targetValue, exactMatch = false, type, c
     if (matchedKeys[0]) yield *matchedKeys.map(key => currentPath ? `${currentPath}.${key}` : key);
 
     for (const key in obj) {
-      const found = this._traverse(obj[key], targetValue, exactMatch, type, currentPath ? `${currentPath}.${key}` : key);
+      const found = _traverse(obj[key], targetValue, exactMatch, type, currentPath ? `${currentPath}.${key}` : key);
       if (found) yield *found;
     }
   } catch (err) {
@@ -63,7 +63,7 @@ export const _find = (obj, targetValue, exact = false, type) => {
     let results;
 
     if (type === 'key' || type === 'value' || type === 'all') {
-      results = [ ...this._traverse(obj, targetValue, exact, type) ];
+      results = [ ..._traverse(obj, targetValue, exact, type) ];
     } else {
       return _error(_labels.concat('_find'), `Argument "type" must be a string value of "key", "value", or "both"`);
     }
@@ -143,7 +143,7 @@ export const assertObject = input => {
    * We do not want to use a try...catch here purposefully in order to
    * get proper stack traces and labels.
    */
-  if (!this.isObject(input)) {
+  if (!isObject(input)) {
     throw new TypeError(`Expected an object but received ${typeof input}.`);
   }
 };
@@ -165,7 +165,7 @@ export const keysToLowerCase = (obj, nested = false) => {
   try {
     return Object.keys(obj).reduce((accumulator, key) => {
       let val = obj[key];
-      if (nested && typeof val === 'object') val = this.keysToLowerCase(val);
+      if (nested && typeof val === 'object') val = keysToLowerCase(val);
       accumulator[key.toLowerCase()] = val;
       return accumulator;
     }, {});
@@ -186,7 +186,7 @@ export const excludeProperties = (obj, ...keys) => {
 
 export const findEntriesByKeyword = (obj, keyword, exact = false) => {
   try {
-    return this._find(obj, keyword, exact, 'all');
+    return _find(obj, keyword, exact, 'all');
   } catch (err) {
     _error(_labels.concat('findEntriesByKeyword'), err);
   }
@@ -194,20 +194,20 @@ export const findEntriesByKeyword = (obj, keyword, exact = false) => {
 
 export const findEntriesByKey = (obj, key, exact = false) => {
   try {
-    return this._find(obj, key, exact, 'key');
+    return _find(obj, key, exact, 'key');
   } catch (err) {
     _error(_labels.concat('findEntriesByKey'), err);
   }
 };
 
 export const findEntriesByValue = (obj, value, exact = false) => {
-  return this._find(obj, value, exact, 'value');
+  return _find(obj, value, exact, 'value');
 };
 
 export const removeUndefinedProperties = obj => {
   try {
     Object.keys(obj).forEach(key => {
-      if (obj[key] && typeof obj[key] === 'object') this.removeEmptyProperties(obj[key]);
+      if (obj[key] && typeof obj[key] === 'object') removeEmptyProperties(obj[key]);
       else if (obj[key] === undefined) delete obj[key];
     });
     return obj;

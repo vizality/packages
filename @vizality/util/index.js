@@ -31,5 +31,3 @@ export {
   time,
   dom
 };
-
-export default this;

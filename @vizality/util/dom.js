@@ -118,7 +118,7 @@ export const joinClassNames = (...items) => {
         classes.push(item);
       } else if (Array.isArray(item)) {
         if (item.length) {
-          const inner = this.joinClassNames.apply(null, item);
+          const inner = joinClassNames.apply(null, item);
           if (inner) classes.push(inner);
         }
       } else if (argType === 'object') {

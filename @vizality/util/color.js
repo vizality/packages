@@ -528,7 +528,7 @@ export const getContrastColor = color => {
         b = `0x${arg[5]}${arg[6]}`;
       }
     };
-    _hex(this.toHex(color));
+    _hex(toHex(color));
     if ((r * 0.299) + (g * 0.587) + (b * 0.114) > 160) return '#000';
     return '#fff';
   } catch (err) {
@@ -548,9 +548,9 @@ export const getRandomColor = (type = 'hex') => {
     const color = `#${(base + number).substr(-6)}`;
 
     if (type === 'hex') return color;
-    if (type === 'int') return this._hex2int(color);
-    if (type === 'rgb') return this._hex2rgb(color);
-    if (type === 'hsl') return this._hex2hsl(color);
+    if (type === 'int') return _hex2int(color);
+    if (type === 'rgb') return _hex2rgb(color);
+    if (type === 'hsl') return _hex2hsl(color);
   } catch (err) {
     _error(_labels.concat('getRandomColor'), err);
   }
@@ -575,7 +575,7 @@ export const rotateHue = (color, amount) => {
 export const getComplement = color => {
   try {
     // Make sure the color is an identifiable type
-    const type = this.getColorType(color);
+    const type = getColorType(color);
     if (!type) {
       throw new Error(`Could not determine a color type for "${color}".`);
     }
@@ -583,9 +583,9 @@ export const getComplement = color => {
     const complement = tinycolor(color).complement().toHexString();
 
     if (type === 'hex') return complement;
-    if (type === 'int') return this._hex2int(complement);
-    if (type === 'rgb') return this._hex2rgb(complement);
-    if (type === 'hsl') return this._hex2hsl(complement);
+    if (type === 'int') return _hex2int(complement);
+    if (type === 'rgb') return _hex2rgb(complement);
+    if (type === 'hsl') return _hex2hsl(complement);
   } catch (err) {
     _error(_labels.concat('getComplement'), err);
   }
@@ -612,12 +612,12 @@ export const getColorType = color => {
 export const toHex = color => {
   try {
     // Make sure the color is an identifiable type
-    const type = this.getColorType(color);
+    const type = getColorType(color);
     if (!type) return;
-    if (type === 'int') return this._int2hex(color);
+    if (type === 'int') return _int2hex(color);
     if (type === 'hex') return color;
-    if (type === 'rgb') return this._rgb2hex(color);
-    if (type === 'hsl') return this._hsl2hex(color);
+    if (type === 'rgb') return _rgb2hex(color);
+    if (type === 'hsl') return _hsl2hex(color);
   } catch (err) {
     _error(_labels.concat('toHex'), err);
   }
@@ -626,13 +626,13 @@ export const toHex = color => {
 export const toHsl = color => {
   try {
     // Make sure the color is an identifiable type
-    const type = this.getColorType(color);
+    const type = getColorType(color);
     if (!type) {
       throw new Error(`Could not determine a color type for "${color}". Please make sure it is a valid color.`);
     }
-    if (type === 'int') return this._int2hsl(color);
-    if (type === 'hex') return this._hex2hsl(color);
-    if (type === 'rgb') return this._rgb2hsl(color);
+    if (type === 'int') return _int2hsl(color);
+    if (type === 'hex') return _hex2hsl(color);
+    if (type === 'rgb') return _rgb2hsl(color);
     if (type === 'hsl') return color;
   } catch (err) {
     _error(_labels.concat('toHsl'), err);
@@ -642,14 +642,14 @@ export const toHsl = color => {
 export const toInt = color => {
   try {
     // Make sure the color is an identifiable type
-    const type = this.getColorType(color);
+    const type = getColorType(color);
     if (!type) {
       throw new Error(`Could not determine a color type for "${color}". Please make sure it is a valid color.`);
     }
     if (type === 'int') return color;
-    if (type === 'hex') return this._hex2int(color);
-    if (type === 'rgb') return this._rgb2int(color);
-    if (type === 'hsl') return this._hsl2int(color);
+    if (type === 'hex') return _hex2int(color);
+    if (type === 'rgb') return _rgb2int(color);
+    if (type === 'hsl') return _hsl2int(color);
   } catch (err) {
     _error(_labels.concat('toInt'), err);
   }
@@ -658,15 +658,15 @@ export const toInt = color => {
 export const toRgb = color => {
   try {
     // Make sure the color is an identifiable type
-    const type = this.getColorType(color);
+    const type = getColorType(color);
     if (!type) {
       throw new Error(`Could not determine a color type for "${color}". Please make sure it is a valid color.`);
     }
 
-    if (type === 'int') return this._int2rgb(color);
-    if (type === 'hex') return this._hex2rgb(color);
+    if (type === 'int') return _int2rgb(color);
+    if (type === 'hex') return _hex2rgb(color);
     if (type === 'rgb') return color;
-    if (type === 'hsl') return this._hsl2rgb(color);
+    if (type === 'hsl') return _hsl2rgb(color);
   } catch (err) {
     _error(_labels.concat('toRgb'), err);
   }
@@ -681,8 +681,8 @@ export const toRgb = color => {
  */
 export const blendColors = (firstColor, secondColor, percent = 0.5) => {
   try {
-    const firstColorType = this.getColorType(firstColor);
-    const secondColorType = this.getColorType(secondColor);
+    const firstColorType = getColorType(firstColor);
+    const secondColorType = getColorType(secondColor);
     if (!firstColorType) {
       throw new Error(`Could not determine a color type for "${firstColor}".`);
     }
@@ -698,10 +698,10 @@ export const blendColors = (firstColor, secondColor, percent = 0.5) => {
        * Do a quick conversion to hex and back to make sure it's in a
        * cleaned up RGB format.
        */
-      firstColor = this.toHex(firstColor);
-      firstColor = this.toRgb(firstColor);
-      secondColor = this.toHex(secondColor);
-      secondColor = this.toRgb(secondColor);
+      firstColor = toHex(firstColor);
+      firstColor = toRgb(firstColor);
+      secondColor = toHex(secondColor);
+      secondColor = toRgb(secondColor);
 
       const i = parseInt;
       const r = Math.round;
@@ -715,8 +715,8 @@ export const blendColors = (firstColor, secondColor, percent = 0.5) => {
        * Do a quick conversion to hex and back to make sure it's in a
        * cleaned up RGB format.
        */
-      result = this.toHex(result);
-      result = this.toRgb(result);
+      result = toHex(result);
+      result = toRgb(result);
 
       return result;
     };
@@ -725,9 +725,9 @@ export const blendColors = (firstColor, secondColor, percent = 0.5) => {
     let newColor = rgbLinearBlend(firstColor, secondColor, percent);
 
     // Convert the new color back to the original provided color's type
-    if (firstColorType === 'int') newColor = this.toInt(newColor);
-    if (firstColorType === 'hex') newColor = this.toHex(newColor);
-    if (firstColorType === 'hsl') newColor = this.toHsl(newColor);
+    if (firstColorType === 'int') newColor = toInt(newColor);
+    if (firstColorType === 'hex') newColor = toHex(newColor);
+    if (firstColorType === 'hsl') newColor = toHsl(newColor);
 
     return newColor;
   } catch (err) {
@@ -744,7 +744,7 @@ export const blendColors = (firstColor, secondColor, percent = 0.5) => {
 export const shadeColor = (color, percent) => {
   try {
     // Make sure the color is an identifiable type
-    const type = this.getColorType(color);
+    const type = getColorType(color);
     if (!type) return _error(_labels.concat('shadeColor'), `Could not determine a color type for "${color}".`);
 
     /**
@@ -755,8 +755,8 @@ export const shadeColor = (color, percent) => {
        * Do a quick conversion to hex and back to make sure it's in a
        * cleaned up RGB format.
        */
-      color = this.toHex(color);
-      color = this.toRgb(color);
+      color = toHex(color);
+      color = toRgb(color);
 
       const i = parseInt;
       const r = Math.round;
@@ -769,8 +769,8 @@ export const shadeColor = (color, percent) => {
        * Do a quick conversion to hex and back to make sure it's in a
        * cleaned up RGB format.
        */
-      result = this.toHex(result);
-      result = this.toRgb(result);
+      result = toHex(result);
+      result = toRgb(result);
 
       return result;
     };
@@ -779,9 +779,9 @@ export const shadeColor = (color, percent) => {
     let newColor = rgbLinearShade(color, percent);
 
     // Convert the new color back to the original provided color's type
-    if (type === 'int') newColor = this.toInt(newColor);
-    if (type === 'hex') newColor = this.toHex(newColor);
-    if (type === 'hsl') newColor = this.toHsl(newColor);
+    if (type === 'int') newColor = toInt(newColor);
+    if (type === 'hex') newColor = toHex(newColor);
+    if (type === 'hsl') newColor = toHsl(newColor);
 
     return newColor;
   } catch (err) {
