@@ -6,7 +6,7 @@
     "email": "dperolio@vizaliy.com",
     "url": "https://dperolio.com"
   },
-  "version": "1.0.12",
+  "version": "1.0.14",
   "license": "MIT",
   "homepage": "https://vizality.com",
   "main": "index.js",

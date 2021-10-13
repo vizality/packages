@@ -4,28 +4,45 @@
  * @namespace Util
  */
 
-import * as performance from './performance';
-import * as security from './security';
-import * as logger from './logger';
-import * as number from './number';
-import * as object from './object';
-import * as string from './string';
-import * as array from './array';
-import * as color from './color';
-import * as react from './react';
-import * as file from './file';
-import * as time from './time';
-import * as dom from './dom';
+import * as Performance from './performance';
+import * as Security from './security';
+import * as Logger from './logger';
+import * as Number from './number';
+import * as Object from './object';
+import * as String from './string';
+import * as Array from './array';
+import * as Color from './color';
+import * as React from './react';
+import * as File from './file';
+import * as Time from './time';
+import * as DOM from './dom';
 
-export const performance;
-export const security;
-export const logger;
-export const number;
-export const object;
-export const string;
-export const array;
-export const color;
-export const react;
-export const file;
-export const time;
-export const dom;
+export {
+  Performance,
+  Security,
+  Logger,
+  Number,
+  Object,
+  String,
+  Array,
+  Color,
+  React,
+  File,
+  Time,
+  DOM
+};
+
+export default {
+  Performance,
+  Security,
+  Logger,
+  Number,
+  Object,
+  String,
+  Array,
+  Color,
+  React,
+  File,
+  Time,
+  DOM
+};
