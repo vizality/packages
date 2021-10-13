@@ -13,6 +13,8 @@
  * @property {string} color Color string in any format (without alpha)
  */
 
+ import { HTTP } from '@vizality/constants';
+
 import { getRandomColor, getContrastColor, blendColors, shadeColor } from './color';
 import { isArray, isEmptyArray, assertArray } from './array';
 import { isString, assertString } from './string';
@@ -66,7 +68,7 @@ export const MODULES = {
  * Outputs messages to console of varying types. Outputted messages contain a badge, label(s), and a message.
  * @param {object} options Options for the console message
  * @param {string} [options.type='log'] Type of console method to use
- * @param {string} [options.badge='vizality://assets/images/logo.png'] Badge image URL
+ * @param {string} [options.badge] Badge image URL
  * @param {Array<string|LoggerLabel>} [options.labels] Label texts or label objects. Limit of 10.
  * @param {...any} [options.message] Contents of the console message
  * @private
@@ -81,7 +83,7 @@ const _logHandler = options => {
      */
     labels = labels || [];
     type = _parseType(type);
-    badge = badge || 'vizality://assets/images/logo.png';
+    badge = badge || `${HTTP.Assets}/logo.png`;
 
     /**
      * Throw an error if any of the arg types aren't as expected.

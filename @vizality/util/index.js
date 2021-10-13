@@ -17,17 +17,15 @@ import * as file from './file';
 import * as time from './time';
 import * as dom from './dom';
 
-export {
-  performance,
-  security,
-  logger,
-  number,
-  object,
-  string,
-  array,
-  color,
-  react,
-  file,
-  time,
-  dom
-};
+export const performance;
+export const security;
+export const logger;
+export const number;
+export const object;
+export const string;
+export const array;
+export const color;
+export const react;
+export const file;
+export const time;
+export const dom;

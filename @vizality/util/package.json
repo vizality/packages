@@ -6,13 +6,16 @@
     "email": "dperolio@vizaliy.com",
     "url": "https://dperolio.com"
   },
-  "version": "1.0.10",
+  "version": "1.0.12",
   "license": "MIT",
   "homepage": "https://vizality.com",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages/tree/main/%40vizality/util"
+  },
+  "scripts": {
+    "push": "npm version patch && npm publish"
   },
   "dependencies": {
     "chunk-text": "^2.0.1",
