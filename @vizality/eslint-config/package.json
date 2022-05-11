@@ -1,6 +1,6 @@
 {
   "name": "@vizality/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shareable ESLint configuration base created for Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
@@ -45,15 +45,13 @@
     "changelog": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^5.22.0"
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.15.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "eslint": "^8.15.0",
     "eslint-plugin-jsdoc": "^39.2.9",
     "eslint-plugin-react": "^7.29.4"
-  },
-  "devDependencies": {
-    "auto-changelog": "^2.4.0"
   }
 }
