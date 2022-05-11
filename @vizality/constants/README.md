@@ -1,3 +1,3 @@
 # @vizality/constants
 
-Constants package created for Vizality plugin developers.
+Package containing commonly used constants. Created for [Vizality](https://vizality.com) plugin developers.
