@@ -17,7 +17,7 @@ import { log, warn, error } from './logger';
 import { assertString } from './string';
 
 /** @private */
-const _labels = [ 'Util', 'Color' ];
+const _labels = [ 'Utils', 'Color' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });

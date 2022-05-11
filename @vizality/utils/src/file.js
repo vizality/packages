@@ -13,7 +13,7 @@ import { log, warn, error } from './logger';
 /**
  * @private
  */
-const _labels = [ 'Util', 'File' ];
+const _labels = [ 'Utils', 'File' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });

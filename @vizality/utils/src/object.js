@@ -12,7 +12,7 @@ import { toPlural, assertString } from './string';
 import { log, warn, error } from './logger';
 
 /** @private */
-const _labels = [ 'Util', 'Object' ];
+const _labels = [ 'Utils', 'Object' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });

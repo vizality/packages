@@ -12,7 +12,7 @@ import moment from 'moment';
 import { log, warn, error } from './logger';
 
 /** @private */
-const _labels = [ 'Util', 'Time' ];
+const _labels = [ 'Utils', 'Time' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });

@@ -13,7 +13,7 @@ import pluralize from 'pluralize';
 import { log, warn, error } from './logger';
 
 /** @private */
-const _labels = [ 'Util', 'String' ];
+const _labels = [ 'Utils', 'String' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });

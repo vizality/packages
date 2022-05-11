@@ -21,7 +21,7 @@ import { isString, assertString } from './string';
 import { assertObject } from './object';
 
 /** @private */
-const _labels = [ 'Util', 'Logger' ];
+const _labels = [ 'Utils', 'Logger' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });
@@ -83,7 +83,7 @@ const _logHandler = options => {
      */
     labels = labels || [];
     type = _parseType(type);
-    badge = badge || `${HTTP.Assets}/logo.png`;
+    badge = badge || `${HTTP.ASSETS}/logo.png`;
 
     /**
      * Throw an error if any of the arg types aren't as expected.

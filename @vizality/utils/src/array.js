@@ -17,7 +17,7 @@ import { isString } from './string';
  * @param {...*} message Message info to send
  * @private
  */
-const _labels = [ 'Util', 'Array' ];
+const _labels = [ 'Utils', 'Array' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });

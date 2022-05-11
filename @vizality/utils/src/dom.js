@@ -10,7 +10,7 @@ import { log, warn, error } from './logger';
 import { sleep } from './time';
 
 /** @private */
-const _labels = [ 'Util', 'DOM' ];
+const _labels = [ 'Utils', 'DOM' ];
 const _log = (labels, ...message) => log({ labels, message });
 const _warn = (labels, ...message) => warn({ labels, message });
 const _error = (labels, ...message) => error({ labels, message });
@@ -29,7 +29,7 @@ export const createElement = (type, props) => {
   } catch (err) {
     _error(_labels.concat('createElement'), err);
   }
-};
+}
 
 export const waitForElement = async (querySelector, all = false) => {
   try {
@@ -40,11 +40,11 @@ export const waitForElement = async (querySelector, all = false) => {
     }
     return element;
   } catch (err) {
-    _error(_labels.concat('waitForElement'), err);
+    _error(_labels.concat("waitForElement"), err);
   }
 };
 
-export const getElementDimensions = node => {
+export const getElementDimensions = (node) => {
   try {
     let widthList = [ 'margin-right', 'margin-left', 'border-right', 'border-left', 'padding-right', 'padding-left', 'width' ];
     let heightList = [ 'margin-top', 'margin-bottom', 'border-top', 'border-bottom', 'padding-top', 'padding-bottom', 'height' ];
