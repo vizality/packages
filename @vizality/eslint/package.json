@@ -1,0 +1,43 @@
+{
+  "name": "@vizality/eslint",
+  "version": "0.0.1",
+  "description": "Shareable ESLint configuration base created for Vizality.",
+  "license": "BSD-2-Clause",
+  "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
+  "homepage": "https://vizality.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vizality/packages.git",
+    "directory": "@vizality/eslint"
+  },
+  "bugs": "https://github.com/vizality/packages/issues",
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "http://paypal.me/vizality"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/vizality"
+    },
+    {
+      "type": "github sponsors",
+      "url": "https://github.com/sponsors/dperolio"
+    }
+  ],
+  "main": "./src/index.js",
+  "scripts": {
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^5.22.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-react": "^7.29.4"
+  }
+}
