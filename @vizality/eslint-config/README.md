@@ -1,4 +1,4 @@
-# @vizality/eslint
+# @vizality/eslint-config
 
 A shareable ESLint configuration base. Created for [Vizality](https://vizality.com).
 

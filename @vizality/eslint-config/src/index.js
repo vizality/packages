@@ -2,6 +2,7 @@ module.exports = {
   "globals": {
     "BigInt": true
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",

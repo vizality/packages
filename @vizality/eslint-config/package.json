@@ -1,5 +1,5 @@
 {
-  "name": "@vizality/eslint",
+  "name": "@vizality/eslint-config",
   "version": "0.0.1",
   "description": "Shareable ESLint configuration base created for Vizality.",
   "license": "BSD-2-Clause",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages.git",
-    "directory": "@vizality/eslint"
+    "directory": "@vizality/eslint-config"
   },
   "bugs": "https://github.com/vizality/packages/issues",
   "funding": [
