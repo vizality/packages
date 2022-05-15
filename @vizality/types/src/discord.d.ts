@@ -20,7 +20,13 @@ export namespace Discord {
        * The application ID of the group DM creator if it is bot-created.
        */
       application_id?: Snowflake;
+      /**
+       * @todo
+       */
       applicatedTags: unknown[], // unfinished
+      /**
+       * @todo
+       */
       availableTags: unknown[], // unfinished
       /**
        * The bitrate (in bits) of the voice channel.
@@ -69,7 +75,13 @@ export namespace Discord {
        * An approximate count of users in a thread, stops counting at 50.
        */
       memberCount?: number,
+      /**
+       * @todo
+       */
       memberIdsPreview: unknown | undefined, // unfinished
+      /**
+       * @todo
+       */
       memberListId: unknown | undefined, // unfinished
       /**
        * An approximate count of messages in a thread, stops counting at 50.
@@ -79,16 +91,25 @@ export namespace Discord {
        * The name of the channel (1-100 characters).
        */
       name?: string | null,
+      /**
+       * @todo
+       */
       nicks: Record<any, unknown>, // unfinished
       /**
        * Whether or not the channel is NSFW (Not Safe For Work).
        */
       nsfw?: boolean,
+      /**
+       * @todo
+       */
       originalChannelId: Snowflake | undefined, // unfinished
       /**
        * The ID of the creator of the group DM or thread.
        */
       ownerId?: Snowflake,
+      /**
+       * @todo
+       */
       parentChannelThreadType: unknown | undefined, // unfinished
       /**
        * For guild channels: ID of the parent category for a channel (each parent category can
