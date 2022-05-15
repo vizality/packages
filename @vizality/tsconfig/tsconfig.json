@@ -1,0 +1,22 @@
+{
+  "exclude": [ "node_modules", "dist" ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "module": "NodeNext",
+    "target": "esnext",
+    "jsx": "react",
+  }
+}

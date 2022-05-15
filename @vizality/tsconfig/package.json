@@ -1,0 +1,38 @@
+{
+  "name": "@vizality/types",
+  "version": "0.0.3",
+  "description": "Contains all of the main type definitions used throughout Vizality.",
+  "license": "BSD-2-Clause",
+  "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
+  "homepage": "https://vizality.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vizality/packages.git",
+    "directory": "@vizality/utils"
+  },
+  "bugs": "https://github.com/vizality/packages/issues",
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "http://paypal.me/vizality"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/vizality"
+    },
+    {
+      "type": "github sponsors",
+      "url": "https://github.com/sponsors/dperolio"
+    }
+  ],
+  "main": "./src/index.d.ts",
+  "scripts": {
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^17.0.31"
+  }
+}
