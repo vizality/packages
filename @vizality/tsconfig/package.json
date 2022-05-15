@@ -1,14 +1,14 @@
 {
-  "name": "@vizality/types",
-  "version": "0.0.3",
-  "description": "Contains all of the main type definitions used throughout Vizality.",
+  "name": "@vizality/tsconfig",
+  "version": "0.0.1",
+  "description": "A shareable TypeScript config base created for Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
   "homepage": "https://vizality.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages.git",
-    "directory": "@vizality/utils"
+    "directory": "@vizality/tsconfig"
   },
   "bugs": "https://github.com/vizality/packages/issues",
   "funding": [
@@ -30,9 +30,5 @@
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish"
-  },
-  "devDependencies": {
-    "@types/lodash-es": "^4.17.6",
-    "@types/node": "^17.0.31"
   }
 }
