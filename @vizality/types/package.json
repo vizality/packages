@@ -1,6 +1,6 @@
 {
   "name": "@vizality/types",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Contains all of the main type definitions used throughout Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
