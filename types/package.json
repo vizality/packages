@@ -1,6 +1,6 @@
 {
   "name": "@vizality/types",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Contains all of the main type definitions used throughout Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages.git",
-    "directory": "@vizality/utils"
+    "directory": "types"
   },
   "bugs": "https://github.com/vizality/packages/issues",
   "funding": [
