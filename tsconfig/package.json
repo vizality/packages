@@ -1,6 +1,6 @@
 {
   "name": "@vizality/tsconfig",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A shareable TypeScript config base created for Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages.git",
-    "directory": "@vizality/tsconfig"
+    "directory": "tsconfig"
   },
   "bugs": "https://github.com/vizality/packages/issues",
   "funding": [
