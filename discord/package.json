@@ -1,14 +1,14 @@
 {
   "name": "@vizality/discord",
-  "version": "0.0.1",
-  "description": "All of the main type definitions used throughout Vizality.",
+  "version": "0.0.2",
+  "description": "Package that contains documentation, wrappers, and easier ways to access useful Discord internal information and methods.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
   "homepage": "https://vizality.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages.git",
-    "directory": "@vizality/utils"
+    "directory": "discord"
   },
   "bugs": "https://github.com/vizality/packages/issues",
   "funding": [
@@ -25,7 +25,7 @@
       "url": "https://github.com/sponsors/dperolio"
     }
   ],
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
