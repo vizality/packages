@@ -1,6 +1,6 @@
 {
   "name": "@vizality/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Contains a collection of various useful utility functions for developers, particularly Vizality plugin developers. Some of these utilities will ONLY work with the Vizality Discord client modification.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vizality/packages.git",
-    "directory": "@vizality/utils"
+    "directory": "utils"
   },
   "bugs": "https://github.com/vizality/packages/issues",
   "funding": [
