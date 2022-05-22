@@ -1,6 +1,7 @@
 {
   "exclude": [ "node_modules", ".git", "dist" ],
   "compilerOptions": {
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "noImplicitAny": true,
@@ -25,7 +26,7 @@
 		"noEmitOnError": true,
 		"useDefineForClassFields": true,
 		"forceConsistentCasingInFileNames": true,
-    "module": "NodeNext",
+    "module": "system",
     "target": "esnext",
     "jsx": "react",
   }
