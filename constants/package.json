@@ -1,6 +1,6 @@
 {
   "name": "@vizality/constants",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Contains a collection of constants used throughout the Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
