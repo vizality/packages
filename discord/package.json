@@ -1,6 +1,6 @@
 {
   "name": "@vizality/discord",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package that contains documentation, wrappers, and easier ways to access useful Discord internal information and methods.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
