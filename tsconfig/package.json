@@ -1,6 +1,6 @@
 {
   "name": "@vizality/tsconfig",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A shareable TypeScript config base created for Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
