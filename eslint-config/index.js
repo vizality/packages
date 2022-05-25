@@ -229,7 +229,6 @@ module.exports = {
     "jsdoc/check-param-names": [ "warn" ],
     "jsdoc/check-types": [ "warn" ],
     "jsdoc/implements-on-classes": [ "warn" ],
-    "jsdoc/newline-after-description": [ "warn", "never" ],
     "jsdoc/no-undefined-types": [ "warn" ],
     "jsdoc/require-hyphen-before-param-description": [ "warn", "never" ],
     "jsdoc/require-param-description": [ "warn" ],

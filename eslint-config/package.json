@@ -1,6 +1,6 @@
 {
   "name": "@vizality/eslint-config",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A shareable ESLint config base created for Vizality.",
   "license": "BSD-2-Clause",
   "author": "Dustin Perolio <me@dperolio.com> (https://dperolio.com)",
